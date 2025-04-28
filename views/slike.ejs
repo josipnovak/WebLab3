@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Galerija</title> 
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/style_slike.css">
+	</head>
+	<body>
+		<header>
+		<h1>Galerija</h1>
+		</header>
+        <div class="navigation">
+            <ul>
+                <li><a href="/">Pocetna</a></li>
+                <li><a href="/videoteka">Videoteka</a></li>
+                <li><a href="/slike">Galerija</a></li>
+                <li><a href="/grafikon">Grafikon</a></li>
+            </ul>
+        </div>
+        <div id="hamburger-menu">
+            <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
+            
+            <label for="menu-toggle" class="hamburger-button">&#9776;</label>
+            
+            <nav class="nav-links" aria-hidden="true">
+                <ul>
+                    <li><a href="/">Pocetna</a></li>
+                    <li><a href="/videoteka">Videoteka</a></li>
+                    <li><a href="/slike">Galerija</a></li>
+                    <li><a href="/grafikon">Grafikon</a></li>
+                </ul>
+            </nav>
+        </div>
+	<h1>Galerija slika</h1>
+<section class="galerija"> 
+
+    <% images.forEach(image => { %>
+        <figure class="galerija_slika">
+        <a href="#lightbox<%= image.id %>"">
+            <img src="<%= image.url %>" alt="<%= image.title %>" loading="lazy">
+        </a>
+        <figcaption><%= image.title %></figcaption>
+        </figure>
+    <% }); %>
+	  
+</section>
+    <% images.forEach(image => { %>
+        <div class="lightbox" id="lightbox<%= image.id %>">
+            <a href="#!" class="close"></a>
+            <img src="<%= image.url %>" alt="<%= image.title %>">	
+        </div>
+    <% }); %>
+    </body>
+    </html>

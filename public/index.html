@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Web stranica o filmovima">
+		<title>Pocetna</title> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+        <link rel="stylesheet" href="styles/style.css">
+	</head>
+	<body>
+		<script src="scriptIndex.js"></script>
+		<header>
+		<h1>Dobrodosli na moju web stranicu</h1>
+		</header>
+	<div class="navigation">
+		<ul>
+			<li><a href="/">Pocetna</a></li>
+			<li><a href="/videoteka">Videoteka</a></li>
+			<li><a href="/slike">Galerija</a></li>
+			<li><a href="/grafikon">Grafikon</a></li>
+		</ul>
+	</div>
+    <div id="hamburger-menu">
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle navigation" />
+        
+        <label for="menu-toggle" class="hamburger-button">&#9776;</label>
+        
+        <nav class="nav-links" aria-hidden="true">
+            <ul>
+                <li><a href="/">Pocetna</a></li>
+				<li><a href="/videoteka">Videoteka</a></li>
+                <li><a href="/slike">Galerija</a></li>
+                <li><a href="/grafikon">Grafikon</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1>Popis Filmova</h1>
+	<div class="table-images-container">
+    <table id="filmovi-tablica-index">
+		<thead>
+			<tr>
+				<th>Naslov</th>
+				<th>Godina</th>
+				<th>Zanr</th>
+				<th>Trajanje</th> 	
+				<th>Ocjena</th>
+				<th>Države</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+        
+	<aside>
+		<div class="images">
+			<img src="images/image1_index.jpg" alt="Slika1">
+			<img src="images/image2_index.jpg" alt="Slika2">
+		</div>
+		<div class="images_small">
+			<img src="https://unsplash.it/300/200?random=1" alt="Slika 1">
+			<img src="https://unsplash.it/300/200?random=2" alt="Slika 2">
+		</div>
+	</aside>
+	</div>
+		<section>
+			<h2>Ovo je glavna sekcija</h2>
+			<p>HTML5 omogucava semanticku strukturu koja poboljsava pristupacnost i SEO.</p>
+		</section>
+          
+		<article>
+			<h2>Najnovije vijesti</h2>
+			<p>Ovdje se nalazi clanak s vaznim informacijama.</p>
+		</article>
+		<footer>
+		<p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+		</footer>
+	</body>
+	</html>
